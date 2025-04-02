@@ -84,3 +84,8 @@ Este repositório contém o desenvolvimento de um sistema SaaS (Software como Se
   - [Express.js](https://expressjs.com/)
   - [Axios](https://axios-http.com/)
   - [Tailwind CSS](https://tailwindcss.com/docs)
+## Documento RFC (Requisitos e Especificações)
+
+Para detalhes técnicos completos do projeto, consulte o documento RFC:
+
+[Clique aqui para acessar o RFC completo (PDF)](docs/saas-rfc.pdf)
