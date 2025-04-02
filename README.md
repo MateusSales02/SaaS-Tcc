@@ -88,4 +88,4 @@ Este repositório contém o desenvolvimento de um sistema SaaS (Software como Se
 
 Para detalhes técnicos completos do projeto, consulte o documento RFC:
 
-[Clique aqui para acessar o RFC completo (PDF)](docs/saas-rfc.pdf)
+[RFC completo (PDF)](docs/saas-rfc.pdf)
