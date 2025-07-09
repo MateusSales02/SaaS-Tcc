@@ -1,91 +1,108 @@
-# SaaS para Gerenciamento de Clãs em Jogos Online
+# 🛡️ SaaS para Gerenciamento de Clãs em MMORPGs
 
-Este repositório contém o desenvolvimento de um sistema SaaS (Software como Serviço) voltado para a gestão de clãs em jogos MMORPG. O objetivo é fornecer uma plataforma centralizada, segura e escalável para facilitar a administração de eventos, controle financeiro, gerenciamento de membros, builds e integração com ferramentas externas.
+Plataforma web desenvolvida como Trabalho de Conclusão de Curso (TCC) para o curso de Engenharia de Software. O projeto propõe uma solução SaaS (Software como Serviço) escalável, segura e moderna para a **gestão de clãs em jogos online**, com foco inicial no **Albion Online**.
 
-## Funcionalidades Principais
+## 📌 Objetivo
 
-- Cadastro e gerenciamento de membros do clã
-- Criação e gestão de eventos com confirmação de presença
-- Controle financeiro com registro de receitas e despesas
-- Dashboard personalizável por usuário
-- Gerenciamento de builds estratégicas
-- Integração com APIs externas como Albion Online e Discord
-- Sistema de permissões por hierarquia de cargos
-- Geração de relatórios sobre economia e participação em eventos
-- Exportação de dados em CSV ou PDF
+Oferecer uma solução centralizada que permita a líderes e membros de clãs organizarem eventos, gerirem finanças, builds (equipamentos e habilidades), distribuírem recompensas e se comunicarem com eficiência — eliminando a dependência de planilhas e mensagens soltas.
 
-## Tecnologias Utilizadas
+---
 
-**Frontend**
+## ✨ Funcionalidades Principais
 
-- Vue.js
+- 👥 **Gestão de Membros:** Cadastro, edição e controle de cargos e permissões.
+- 📅 **Eventos:** Agendamento, confirmação de presença e recorrência.
+- 💰 **Controle Financeiro:** Registro de entradas/saídas e auditoria completa.
+- 🧠 **Gerenciamento de Builds:** Armazenamento de builds.
+- 📊 **Dashboard Dinâmico:** Informações personalizadas.
+- 🔗 **Integrações com APIs:** Albion Online (economia) e Discord (notificações).
+- 📤 **Exportação de Dados:** Histórico financeiro, membros e eventos em CSV/PDF.
+
+---
+
+## ⚙️ Stack Tecnológica
+
+### 🔧 Backend
+
+- [NestJS](https://nestjs.com/) (TypeScript)
+- Express.js
+- PostgreSQL (banco relacional)
+- Redis (cache)
+- Firebase Auth / Auth0 (autenticação)
+- Axios (HTTP client)
+
+### 🖥️ Frontend
+
+- [Vue.js](https://vuejs.org/)
 - Tailwind CSS
 
-**Backend**
-
-- NestJS (Node.js)
-- Express.js
-- Axios
-
-**Banco de Dados e Cache**
-
-- PostgreSQL
-- Redis
-
-**Autenticação e Segurança**
-
-- Firebase Auth / Auth0
-- OAuth 2.0 / JWT
-- Criptografia AES-256
-
-**DevOps e Infraestrutura**
+### 🧱 DevOps e Infra
 
 - Docker
-- Kubernetes
 - GitHub Actions (CI/CD)
-- Prometheus e Grafana (monitoramento e observabilidade)
+- Prometheus + Grafana (monitoramento)
+- GitHub Projects / Azure DevOps (Kanban)
 
-**Gerenciamento de Projeto**
+---
 
-- Azure DevOps ou GitHub Projects (Kanban)
-- Notion ou Wiki do GitHub (documentação)
+## 🧠 Arquitetura
 
-## Arquitetura
+O projeto adota **Arquitetura de Microserviços**, com documentação em **modelagem C4** (Contexto, Contêineres, Componentes e Código). Padrões utilizados:
 
-- Arquitetura baseada em microserviços
-- Modelagem utilizando C4 Model (Contexto, Contêineres, Componentes e Código)
-- Comunicação via APIs RESTful
-- Design modular com padrões como MVC, Event-Driven e Repository Pattern
+- **MVC** (no frontend)
+- **Event-Driven Architecture**
+- **Repository Pattern**
+- Comunicação via RESTful APIs
 
-## Escopo Inicial
+---
 
-- Foco inicial em clãs do jogo Albion Online
-- Integração com a API de mercado do Albion Online e com o Discord
-- Acesso por níveis de permissão
-- Compatibilidade com navegadores desktop e dispositivos móveis (versão responsiva)
+## 🔐 Requisitos Não Funcionais
 
-## Próximos Passos
+- 🔒 Autenticação via OAuth2/JWT e criptografia AES-256
+- ⚙️ Alta disponibilidade (>99.5%) e escalabilidade
+- 📱 Responsivo (desktop e mobile)
+- 🧾 Logs de auditoria e backups automáticos
+- 🌍 Suporte a múltiplos idiomas
+- 🚀 Operações críticas < 300ms
 
-- Refinamento da modelagem e arquitetura
-- Desenvolvimento incremental com testes contínuos
-- Implementação de autenticação e autorização
-- Integração com APIs externas
-- Validação do MVP com usuários reais
+---
 
-## Referências
+## 🚧 Limitações da Primeira Versão (MVP)
 
-- Fowler, M. *Patterns of Enterprise Application Architecture*. Addison-Wesley, 2002.
-- Documentações oficiais:
-  - [PostgreSQL](https://www.postgresql.org/docs/)
-  - [Node.js](https://nodejs.org/en/docs/)
-  - [Vue.js](https://vuejs.org/guide/introduction.html)
-  - [Albion Online API](https://www.albion-online-data.com/)
-  - [Discord API](https://discord.com/developers/docs/intro)
-  - [Express.js](https://expressjs.com/)
-  - [Axios](https://axios-http.com/)
-  - [Tailwind CSS](https://tailwindcss.com/docs)
-## Documento RFC (Requisitos e Especificações)
+- Compatível apenas com **Albion Online**
+- Integração inicial apenas com APIs do Albion e Discord
+- Sem app mobile nativo (interface responsiva)
+- Permissões baseadas em níveis hierárquicos no clã
 
-Para detalhes técnicos completos do projeto, consulte o documento RFC:
+---
 
-[RFC completo (PDF)](docs/saas-rfc.pdf)
+## 📈 Próximos Passos
+
+- Refinamento da arquitetura
+- Testes automatizados e validação com usuários reais
+- Expansão para outros MMORPGs
+- Suporte a mais integrações externas (APIs de outros jogos)
+- Lançamento de app mobile futuramente
+
+---
+
+## 📚 Referências
+
+- Fowler, M. *Patterns of Enterprise Application Architecture*
+- [PostgreSQL Docs](https://www.postgresql.org/docs/)
+- [Node.js Docs](https://nodejs.org/en/docs/)
+- [Vue.js Guide](https://vuejs.org/guide/)
+- [Discord API](https://discord.com/developers/docs)
+- [Albion Online API](https://www.albion-online-data.com/)
+- [Express.js](https://expressjs.com/)
+- [Axios](https://axios-http.com/)
+- [Tailwind CSS](https://tailwindcss.com/docs)
+
+---
+
+## 👨‍🎓 Sobre o Autor
+
+**Mateus Sales de Oliveira**  
+Projeto de Conclusão de Curso em Engenharia de Software  
+Centro Universitário Católica de Santa Catarina  
+Orientadores: Claudinei Dias, Manfred Heil Junior e Paulo Rogerio Pires Manseira
